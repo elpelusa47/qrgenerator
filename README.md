@@ -1,2 +1,0 @@
-# qrgenerator
-QR Generator
