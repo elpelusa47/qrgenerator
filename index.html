@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Generador de Códigos QR</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="controls">
+        <h1>Generador de códigos QR</h1>
+        <p class="lead">Introduce una URL o texto y genera un QR para compartir o descargar.</p>
+
+        <label for="url">Enlace o texto</label>
+        <input id="url" type="url" placeholder="https://ejemplo.com" value="https://" />
+
+        <div class="row">
+          <div class="small">
+            <label for="size">Tamaño (px)</label>
+            <input id="size" type="number" min="64" max="1024" value="256" />
+          </div>
+          <div class="small">
+            <label for="fg">Color del QR</label>
+            <input id="fg" type="color" value="#000000" />
+          </div>
+          <div class="small">
+            <label for="bg">Color de fondo</label>
+            <input id="bg" type="color" value="#ffffff" />
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="generate" class="btn">Generar QR</button>
+          <button id="download" class="btn ghost">Descargar</button>
+        </div>
+      </div>
+
+      <div class="preview">
+        <h2>Previsualización</h2>
+        <div id="qrcode"></div>
+        <p class="meta" id="qrMeta">Aún no se ha generado ningún código.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
